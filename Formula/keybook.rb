@@ -1,8 +1,8 @@
 class Keybook < Formula
   desc "macOS TUI for searching keyboard shortcuts and recipes"
   homepage "https://github.com/Ariyapong/keybook"
-  url "https://registry.npmjs.org/@arthony/keybook/-/keybook-0.1.1.tgz"
-  sha256 "9b7118297dfd7917e5e9a7e71150ca1ece8a632cd946b17e79446367145727c4"
+  url "https://registry.npmjs.org/@arthony/keybook/-/keybook-0.2.0.tgz"
+  sha256 "bd4a6eff70675ab79f6c1129736d84be77d6ea47488090c1c1adb44938e3a056"
   license "MIT"
 
   depends_on "node@22"
@@ -13,10 +13,7 @@ class Keybook < Formula
   end
 
   test do
-    # v0.1.1's binary hardcoded --version to "0.1.0"; re-enable the
-    # version-match assertion when the formula is bumped to 0.2.0+,
-    # which reads the version from package.json at runtime.
-    system bin/"keybook", "--version"
+    assert_match version.to_s, shell_output("#{bin}/keybook --version")
     system bin/"keybook", "check"
   end
 end
