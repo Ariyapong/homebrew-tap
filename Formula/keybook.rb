@@ -1,8 +1,8 @@
 class Keybook < Formula
   desc "macOS TUI for searching keyboard shortcuts and recipes"
   homepage "https://github.com/Ariyapong/keybook"
-  url "https://registry.npmjs.org/@arthony/keybook/-/keybook-.tgz"
-  sha256 "c8d3eae160a892e32837db3dcae515e843e5383fef52b8141940c8bcf8b6d59f"
+  url "https://registry.npmjs.org/@arthony/keybook/-/keybook-0.4.0.tgz"
+  sha256 "d972e506b760ed1f077cb674ee1f35f5b2ece8fdf29327ba9ede3227cd59057d"
   license "MIT"
 
   depends_on "node@22"
